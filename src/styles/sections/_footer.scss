@@ -1,0 +1,21 @@
+.footer__container {
+  padding-top: 45px;
+  padding-bottom: 45px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $--color-black;
+}
+
+.footer__item {
+  &:not(:last-child) {
+    margin-right: 20px;
+  }
+}
+
+.footer__social {
+  display: inline-block;
+  svg {
+    width: 45px;
+    height: 45px;
+  }
+}

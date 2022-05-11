@@ -1,0 +1,955 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blanchard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="styles/vendor.css" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+</head>
+
+<body>
+  <!-- BEGIN === HEADER === -->
+  <header class="header">
+    <div class="container header__container flex">
+      <a href="#" class="header__link">
+        <svg class="logo header__logo">
+        <use xlink:href="images/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="nav header__nav">
+        <ul class="nav__list list-reset">
+          <li class="nav__item">
+            <a href="#" class="nav__link"> О нас </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> Галерея </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> Каталог </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> События </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> Издания </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> Проекты </a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link"> Контакты </a>
+          </li>
+        </ul>
+      </nav>
+      <a href="#" class="header__login">
+        <svg class="header__icon">
+        <use xlink:href="images/sprite.svg#login"></use>
+        </svg>
+        Войти
+      </a>
+    </div>
+  </header>
+  <!-- END === HEADER === -->
+
+  <!-- BEGIN === MENU === -->
+  <menu class="menu" type="toolbar">
+    <div class="container menu__container">
+      <ul class="menu__list list-reset" id="menu_list">
+        <li class="menu__item">
+          <a href="#" class="menu__link">Реализм</a>
+          <ul class="menu__dropdown menu-dropdown__list list-reset">
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/tintoretto.jpg');"> Тинторетто </a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/fridrikh.jpg');"> Фридрих </a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/leo.jpg');"> Леонардо </a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/vierrok.jpg');"> Верроккьо </a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Импрессионизм</a>
+          <ul class="menu__dropdown menu-dropdown__list list-reset">
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/mone.jpg');">Моне</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/sisley.jpg');">Сислей</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/mane.jpg');">Мане</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/renouar.jpg');">Ренуар</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Постимпрессионизм</a>
+          <ul class="menu__dropdown menu-dropdown__list list-reset">
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/vangog.jpg');">Ван Гог</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/sezan.jpg');">Сезанн</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/gogen.jpg');">Гоген</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/sera.jpg');">Сёра</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Авангард</a>
+          <ul class="menu__dropdown menu-dropdown__list">
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/kandi.jpg');">Кандинский</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/marine.jpg');">Маринетти</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/malev.jpg');">Малевич</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/pacas.jpg');">Пикассо</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link">Футуризм</a>
+          <ul class="menu__dropdown menu-dropdown__list list-reset">
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/kappa.jpg');">Карра</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/pratel.jpg');">Прателла</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/sever.jpg');">Северини</a>
+            </li>
+            <li class="menu-dropdown__item">
+              <a href="#" class="menu-dropdown__link" style="background-image: url('images/menu/balla.jpg');">Балла</a>
+            </li>
+          </ul>
+        </li>
+        <li class="menu__item menu__search-wrap">
+          <svg class="menu__search-icon">
+          <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          <input class="menu__search" id="" type="search" name="site-search" placeholder="Поиск по сайту" />
+        </li>
+      </ul>
+    </div>
+  </menu>
+  <!-- END === MENU === -->
+
+  <main class="main">
+    <!-- BEGIN === HERO === -->
+    <section class="section hero">
+      <div class="container hero__container">
+        <h1 class="title hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
+        <p class="hero__descr">
+          Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что реализация
+          намеченных плановых заданий создаёт предпосылки для новых предложений.
+        </p>
+        <a href="#" class="btn hero__btn">Подписаться на&nbsp;рассылку</a>
+      </div>
+    </section>
+    <!-- END === HERO === -->
+
+    <!-- BEGIN === ABOUT_US === -->
+    <section class="section about_us">
+      <div class="container about_us__container">
+        <h2 class="section__title about_us__title">О&nbsp;нас</h2>
+        <p class="about_us__descr">
+          Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
+          участника как способного принимать собственные решения касаемо распределения внутренних резервов
+          и&nbsp;ресурсов. Не&nbsp;следует, однако, забывать, что высококачественный прототип будущего проекта влечет
+          за&nbsp;собой процесс внедрения и&nbsp;модернизации модели развития. Повседневная практика показывает, что
+          высокое качество позиционных исследований создаёт необходимость включения в производственный план целого
+          ряда внеочередных мероприятий с&nbsp;учётом комплекса распределения внутренних резервов и&nbsp;ресурсов.
+          В&nbsp;рамках спецификации современных стандартов, действия представителей оппозиции набирают популярность
+          среди
+          определенных слоев населения, а&nbsp;значит, должны быть разоблачены.
+        </p>
+      </div>
+    </section>
+    <!-- END === ABOUT_US === -->
+
+    <!-- BEGIN === GALLERY === -->
+    <section class="section gallery">
+      <div class="container gallery__container">
+        <div class="gallery__left">
+          <h2 class="section__title gallery__title">Галерея</h2>
+          <label for="gallery_select" class="label gallery__label">Фильтровать&nbsp;по:</label>
+          <select class="select" name="gallery-sort" id="gallery_select">
+            <option value="author">Автор</option>
+            <option value="direct">Направление</option>
+            <option value="tech">Техника</option>
+          </select>
+          <p class="gallery__descr">Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества
+            скачиваний авторизуйтесь, либо воспользуйтесь лицензией.</p>
+        </div>
+        <div class="gallery__right swiper" id="gallery_swiper">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="gallery__pictures swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-1.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-2.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-3.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-4.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-5.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-6.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-7.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-8.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-9.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-10.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-11.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-12.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-13.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-14.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-15.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-16.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-17.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-18.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-19.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-20.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-21.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-22.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-23.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-24.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-25.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-26.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-27.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-28.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-29.jpg" alt="Картина" class="gallery__pict">
+            </div>
+            <div class="swiper-slide">
+              <img src="images/gallery/pict-30.jpg" alt="Картина" class="gallery__pict">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END === GALLERY === -->
+
+    <!-- BEGIN === CATALOG === -->
+    <section class="section catalog">
+      <div class="container catalog__container">
+        <div class="catalog__head">
+          <h2 class="section__title catalog__title">Каталог</h2>
+          <ul class="country-filter__list list-reset">
+            <li class="country-filter__item"><span class="country-filter__btn country-filter__btn--fr"></span></li>
+            <li class="country-filter__item"><span class="country-filter__btn country-filter__btn--ge"></span></li>
+            <li class="country-filter__item"><span class="country-filter__btn country-filter__btn--it"></span></li>
+            <li class="country-filter__item"><span class="country-filter__btn country-filter__btn--ru"></span></li>
+            <li class="country-filter__item"><span class="country-filter__btn country-filter__btn--bg"></span></li>
+          </ul>
+        </div>
+        <p class="catalog__descr">Акционеры крупнейших компаний, которые представляют собой яркий пример
+          континентально-европейского типа политической культуры, будут объявлены нарушающими общечеловеческие нормы
+          этики и&nbsp;морали. Являясь всего лишь частью общей картины, стремящиеся вытеснить традиционное производство,
+          нанотехнологии и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть функционально разнесены
+          на&nbsp;независимые элементы.</p>
+        <div class="catalog__body">
+          <div class="catalog-left painter">
+            <img src="images/catalog/girlandaio.jpg" alt="Изображение художника" class="painter__img">
+            <p class="painter__name">Доменико Гирландайо</p>
+            <span class="painter__years">2 июня 1448 — 11 января 1494.</span>
+            <p class="painter__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+              художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо. Глава художественной
+              мастерской, где юный Микеланджело в&nbsp;течение года овладевал профессиональными навыками. Автор фресковых
+              циклов, в&nbsp;которых выпукло, со&nbsp;всевозможными подробностями показана домашняя жизнь библейских
+              персонажей (в&nbsp;их&nbsp;роли выступают знатные граждане Флоренции в&nbsp;костюмах того времени).</p>
+          </div>
+          <ul class="painters__list list-reset">
+            <li class="painters__item">
+              <span class="painters__period">
+                С 1400 по 1499 гг.
+                <span class="painters__icon"></span>
+              </span>
+              <ul class="painters__dropdown list-reset">
+                <li class="painters__painter">Бенедетто ди Биндо</li>
+                <li class="painters__painter">Бергоньоне, Амброджо</li>
+                <li class="painters__painter">Биссоло, Франческо</li>
+                <li class="painters__painter">Больтраффио, Джованни</li>
+                <li class="painters__painter">Бонсиньори, Франческо</li>
+                <li class="painters__painter">Боттичини, Рафаэлло</li>
+                <li class="painters__painter">Брамантино</li>
+                <li class="painters__painter">Бреа, Людовико</li>
+                <li class="painters__painter">Бьяджо д’Антонио Туччи</li>
+                <li class="painters__painter">Веккьетта</li>
+                <li class="painters__painter">Андреа Верроккьо</li>
+                <li class="painters__painter">Доменико Гирландайо</li>
+                <li class="painters__painter">Беноццо Гоццоли</li>
+                <li class="painters__painter">Граначчи, Франческо</li>
+                <li class="painters__painter">Грегорио ди Чекко</li>
+                <li class="painters__painter">Джованни да Удине</li>
+                <li class="painters__painter">Джованни ди Паоло</li>
+                <li class="painters__painter">Джорджоне</li>
+                <li class="painters__painter">Парентино, Бернардо</li>
+                <li class="painters__painter">Пезеллино</li>
+                <li class="painters__painter">Пьетро Перуджино</li>
+                <li class="painters__painter">Перуцци, Бальдассаре</li>
+                <li class="painters__painter">Пизанелло</li>
+                <li class="painters__painter">Пинтуриккьо</li>
+              </ul>
+            </li>
+            <li class="painters__item">
+              <span class="painters__period">
+                С 1500 по 1599 гг.
+                <span class="painters__icon"></span>
+              </span>
+              <ul class="painters__dropdown list-reset is-hidden">
+                <li class="painters__painter">Бенедетто ди Биндо</li>
+                <li class="painters__painter">Бергоньоне, Амброджо</li>
+                <li class="painters__painter">Биссоло, Франческо</li>
+                <li class="painters__painter">Больтраффио, Джованни</li>
+                <li class="painters__painter">Бонсиньори, Франческо</li>
+                <li class="painters__painter">Боттичини, Рафаэлло</li>
+                <li class="painters__painter">Брамантино</li>
+                <li class="painters__painter">Бреа, Людовико</li>
+                <li class="painters__painter">Бьяджо д’Антонио Туччи</li>
+                <li class="painters__painter">Веккьетта</li>
+                <li class="painters__painter">Андреа Верроккьо</li>
+                <li class="painters__painter">Доменико Гирландайо</li>
+                <li class="painters__painter">Беноццо Гоццоли</li>
+                <li class="painters__painter">Граначчи, Франческо</li>
+                <li class="painters__painter">Грегорио ди Чекко</li>
+                <li class="painters__painter">Джованни да Удине</li>
+                <li class="painters__painter">Джованни ди Паоло</li>
+                <li class="painters__painter">Джорджоне</li>
+                <li class="painters__painter">Парентино, Бернардо</li>
+                <li class="painters__painter">Пезеллино</li>
+                <li class="painters__painter">Пьетро Перуджино</li>
+                <li class="painters__painter">Перуцци, Бальдассаре</li>
+                <li class="painters__painter">Пизанелло</li>
+                <li class="painters__painter">Пинтуриккьо</li>
+              </ul>
+            </li>
+            <li class="painters__item">
+              <span class="painters__period">
+                С 1600 по 1699 гг.
+                <span class="painters__icon"></span>
+              </span>
+              <ul class="painters__dropdown list-reset is-hidden">
+                <li class="painters__painter">Бенедетто ди Биндо</li>
+                <li class="painters__painter">Бергоньоне, Амброджо</li>
+                <li class="painters__painter">Биссоло, Франческо</li>
+                <li class="painters__painter">Больтраффио, Джованни</li>
+                <li class="painters__painter">Бонсиньори, Франческо</li>
+                <li class="painters__painter">Боттичини, Рафаэлло</li>
+                <li class="painters__painter">Брамантино</li>
+                <li class="painters__painter">Бреа, Людовико</li>
+                <li class="painters__painter">Бьяджо д’Антонио Туччи</li>
+                <li class="painters__painter">Веккьетта</li>
+                <li class="painters__painter">Андреа Верроккьо</li>
+                <li class="painters__painter">Доменико Гирландайо</li>
+                <li class="painters__painter">Беноццо Гоццоли</li>
+                <li class="painters__painter">Граначчи, Франческо</li>
+                <li class="painters__painter">Грегорио ди Чекко</li>
+                <li class="painters__painter">Джованни да Удине</li>
+                <li class="painters__painter">Джованни ди Паоло</li>
+                <li class="painters__painter">Джорджоне</li>
+                <li class="painters__painter">Парентино, Бернардо</li>
+                <li class="painters__painter">Пезеллино</li>
+                <li class="painters__painter">Пьетро Перуджино</li>
+                <li class="painters__painter">Перуцци, Бальдассаре</li>
+                <li class="painters__painter">Пизанелло</li>
+                <li class="painters__painter">Пинтуриккьо</li>
+              </ul>
+            </li>
+            <li class="painters__item">
+              <span class="painters__period">
+                С 1700 по 1799 гг.
+                <span class="painters__icon"></span>
+              </span>
+              <ul class="painters__dropdown list-reset is-hidden">
+                <li class="painters__painter">Бенедетто ди Биндо</li>
+                <li class="painters__painter">Бергоньоне, Амброджо</li>
+                <li class="painters__painter">Биссоло, Франческо</li>
+                <li class="painters__painter">Больтраффио, Джованни</li>
+                <li class="painters__painter">Бонсиньори, Франческо</li>
+                <li class="painters__painter">Боттичини, Рафаэлло</li>
+                <li class="painters__painter">Брамантино</li>
+                <li class="painters__painter">Бреа, Людовико</li>
+                <li class="painters__painter">Бьяджо д’Антонио Туччи</li>
+                <li class="painters__painter">Веккьетта</li>
+                <li class="painters__painter">Андреа Верроккьо</li>
+                <li class="painters__painter">Доменико Гирландайо</li>
+                <li class="painters__painter">Беноццо Гоццоли</li>
+                <li class="painters__painter">Граначчи, Франческо</li>
+                <li class="painters__painter">Грегорио ди Чекко</li>
+                <li class="painters__painter">Джованни да Удине</li>
+                <li class="painters__painter">Джованни ди Паоло</li>
+                <li class="painters__painter">Джорджоне</li>
+                <li class="painters__painter">Парентино, Бернардо</li>
+                <li class="painters__painter">Пезеллино</li>
+                <li class="painters__painter">Пьетро Перуджино</li>
+                <li class="painters__painter">Перуцци, Бальдассаре</li>
+                <li class="painters__painter">Пизанелло</li>
+                <li class="painters__painter">Пинтуриккьо</li>
+              </ul>
+            </li>
+            <li class="painters__item">
+              <span class="painters__period">
+                С 1800 по 1899 гг.
+                <span class="painters__icon"></span>
+              </span>
+              <ul class="painters__dropdown list-reset is-hidden">
+                <li class="painters__painter">Бенедетто ди Биндо</li>
+                <li class="painters__painter">Бергоньоне, Амброджо</li>
+                <li class="painters__painter">Биссоло, Франческо</li>
+                <li class="painters__painter">Больтраффио, Джованни</li>
+                <li class="painters__painter">Бонсиньори, Франческо</li>
+                <li class="painters__painter">Боттичини, Рафаэлло</li>
+                <li class="painters__painter">Брамантино</li>
+                <li class="painters__painter">Бреа, Людовико</li>
+                <li class="painters__painter">Бьяджо д’Антонио Туччи</li>
+                <li class="painters__painter">Веккьетта</li>
+                <li class="painters__painter">Андреа Верроккьо</li>
+                <li class="painters__painter">Доменико Гирландайо</li>
+                <li class="painters__painter">Беноццо Гоццоли</li>
+                <li class="painters__painter">Граначчи, Франческо</li>
+                <li class="painters__painter">Грегорио ди Чекко</li>
+                <li class="painters__painter">Джованни да Удине</li>
+                <li class="painters__painter">Джованни ди Паоло</li>
+                <li class="painters__painter">Джорджоне</li>
+                <li class="painters__painter">Парентино, Бернардо</li>
+                <li class="painters__painter">Пезеллино</li>
+                <li class="painters__painter">Пьетро Перуджино</li>
+                <li class="painters__painter">Перуцци, Бальдассаре</li>
+                <li class="painters__painter">Пизанелло</li>
+                <li class="painters__painter">Пинтуриккьо</li>
+              </ul>
+            </li>
+            <li class="painters__item">
+              <span class="painters__period">
+                С 1900 по 1999 гг.
+                <span class="painters__icon"></span>
+              </span>
+              <ul class="painters__dropdown list-reset is-hidden">
+                <li class="painters__painter">Бенедетто ди Биндо</li>
+                <li class="painters__painter">Бергоньоне, Амброджо</li>
+                <li class="painters__painter">Биссоло, Франческо</li>
+                <li class="painters__painter">Больтраффио, Джованни</li>
+                <li class="painters__painter">Бонсиньори, Франческо</li>
+                <li class="painters__painter">Боттичини, Рафаэлло</li>
+                <li class="painters__painter">Брамантино</li>
+                <li class="painters__painter">Бреа, Людовико</li>
+                <li class="painters__painter">Бьяджо д’Антонио Туччи</li>
+                <li class="painters__painter">Веккьетта</li>
+                <li class="painters__painter">Андреа Верроккьо</li>
+                <li class="painters__painter">Доменико Гирландайо</li>
+                <li class="painters__painter">Беноццо Гоццоли</li>
+                <li class="painters__painter">Граначчи, Франческо</li>
+                <li class="painters__painter">Грегорио ди Чекко</li>
+                <li class="painters__painter">Джованни да Удине</li>
+                <li class="painters__painter">Джованни ди Паоло</li>
+                <li class="painters__painter">Джорджоне</li>
+                <li class="painters__painter">Парентино, Бернардо</li>
+                <li class="painters__painter">Пезеллино</li>
+                <li class="painters__painter">Пьетро Перуджино</li>
+                <li class="painters__painter">Перуцци, Бальдассаре</li>
+                <li class="painters__painter">Пизанелло</li>
+                <li class="painters__painter">Пинтуриккьо</li>
+              </ul>
+            </li>
+            <li class="painters__item">
+              <span class="painters__period">
+                С 2000 г.
+                <span class="painters__icon"></span>
+              </span>
+              <ul class="painters__dropdown list-reset is-hidden">
+                <li class="painters__painter">Бенедетто ди Биндо</li>
+                <li class="painters__painter">Бергоньоне, Амброджо</li>
+                <li class="painters__painter">Биссоло, Франческо</li>
+                <li class="painters__painter">Больтраффио, Джованни</li>
+                <li class="painters__painter">Бонсиньори, Франческо</li>
+                <li class="painters__painter">Боттичини, Рафаэлло</li>
+                <li class="painters__painter">Брамантино</li>
+                <li class="painters__painter">Бреа, Людовико</li>
+                <li class="painters__painter">Бьяджо д’Антонио Туччи</li>
+                <li class="painters__painter">Веккьетта</li>
+                <li class="painters__painter">Андреа Верроккьо</li>
+                <li class="painters__painter">Доменико Гирландайо</li>
+                <li class="painters__painter">Беноццо Гоццоли</li>
+                <li class="painters__painter">Граначчи, Франческо</li>
+                <li class="painters__painter">Грегорио ди Чекко</li>
+                <li class="painters__painter">Джованни да Удине</li>
+                <li class="painters__painter">Джованни ди Паоло</li>
+                <li class="painters__painter">Джорджоне</li>
+                <li class="painters__painter">Парентино, Бернардо</li>
+                <li class="painters__painter">Пезеллино</li>
+                <li class="painters__painter">Пьетро Перуджино</li>
+                <li class="painters__painter">Перуцци, Бальдассаре</li>
+                <li class="painters__painter">Пизанелло</li>
+                <li class="painters__painter">Пинтуриккьо</li>
+              </ul>
+            </li>
+          </ul>
+      </div>
+    </div>
+    </section>
+    <!-- END === CATALOG === -->
+
+    <!-- BEGIN === EVENTS === -->
+    <section class="section events">
+      <div class="container events__container">
+        <h2 class="section__title events__title">События</h2>
+        <ul class="events__list list-reset">
+          <li class="events__item">
+            <div class="events__card">
+              <img src="images/events/img-1.jpg" alt="Картина Кватроченто" class="events__img">
+              <div class="events__card-down">
+                <span class="events__capt events__place">Музей им. Щусева</span>
+                <span class="events__capt event__period">с&nbsp;20&nbsp;марта по&nbsp;30&nbsp;апреля</span>
+                <h3 class="events__subtitle">Книжная гравюра в&nbsp;живом восприятии</h3>
+                <p class="events__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                  художественной династии, которую продолжили его брат Давид и сын Ридольфо.</p>
+                <a href="#" class="events__link">Подробнее</a>
+              </div>
+            </div>
+          </li>  
+
+          <li class="events__item">
+            <div class="events__card">
+              <img src="images/events/img-2.jpg" alt="Мозаика" class="events__img">
+              <div class="events__card-down">
+                <span class="events__capt events__place">ММОМА</span>
+                <span class="events__capt event__period">24&nbsp;марта 19:00</span>
+                <h3 class="events__subtitle">&laquo;Открытая дискуссия&raquo;. Дмитрий Петров и&nbsp;Сергей Ильин.</h3>
+                <p class="events__descr">Высокий уровень вовлечения представителей целевой аудитории является четким
+                  доказательством простого факта.</p>
+                <a href="#" class="events__link">Подробнее</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="events__item">
+            <div class="events__card">
+              <img src="images/events/img-3.jpg" alt="Еврейский музей" class="events__img">
+              <div class="events__card-down">
+                <span class="events__capt events__place">Еврейский музей</span>
+                <span class="events__capt event__period">с&nbsp;31&nbsp;марта по&nbsp;21&nbsp;апреля</span>
+                <h3 class="events__subtitle">Выставка &laquo;Формация 2020&raquo;</h3>
+                <p class="events__descr">Идейные соображения высшего порядка, а&nbsp;также современная методология
+                  разработки играет важную роль в&nbsp;формировании глубокомысленных рассуждений.</p>
+                <a href="#" class="events__link">Подробнее</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="events__item is-hidden">
+            <div class="events__card">
+              <img src="images/events/img-4.jpg" alt="Цветная картина" class="events__img">
+              <div class="events__card-down">
+                <span class="events__capt events__place">Третьяковка на&nbsp;Крымском валу</span>
+                <span class="events__capt event__period">с&nbsp;30&nbsp;марта по&nbsp;30&nbsp;апреля</span>
+                <h3 class="events__subtitle">XXIV Международная биеннале молодого искусства</h3>
+                <p class="events__descr">Внезапно, реплицированные с&nbsp;зарубежных источников, современные исследования.
+                </p>
+                <a href="#" class="events__link">Подробнее</a>
+              </div>
+            </div>
+          </li>
+
+          <li class="events__item is-hidden">
+            <div class="events__card">
+              <img src="images/events/img-5.jpg" alt="Джон Винзор" class="events__img">
+              <div class="events__card-down">
+                <span class="events__capt events__place">ММАМ</span>
+                <span class="events__capt event__period">с&nbsp;8&nbsp;апреля по&nbsp;20&nbsp;мая</span>
+                <h3 class="events__subtitle">Джон Винзор. Фотографии из&nbsp;серии &laquo;Метафора серебра&raquo;</h3>
+                <p class="events__descr">Один из&nbsp;ведущих флорентийских художников Кватроченто, основатель
+                  художественной династии, которую продолжили его брат Давид и&nbsp;сын Ридольфо.</p>
+                <a href="#" class="events__link">Подробнее</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <button class="btn-reset btn events__btn">Все события</button>
+      </div>
+    </section>
+    <!-- END === EVENTS === -->
+
+    <!-- BEGIN === EDITIONS === -->
+    <section class="section editions">
+      <div class="container editions__container">
+        <div class="editions__left">
+          <h2 class="section__title editions__title">Издания</h2>
+          <label for="" class="label editions__label">Категории</label>
+          <ul class="editions__category category__list list-reset">
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_best">
+              <label class="category__label" for="editions_check_best">Бестселлеры</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_art">
+              <label class="category__label" for="editions_check_art">Искусство</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_archit">
+              <label class="category__label" for="editions_check_archit">Архитектура</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_design">
+              <label class="category__label" for="editions_check_design">Дизайн</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_fasion">
+              <label class="category__label" for="editions_check_fasion">Мода</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_child">
+              <label class="category__label" for="editions_check_child">Детям</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_im-lit">
+              <label class="category__label" for="editions_check_im-lit">Художественная литература</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_public">
+              <label class="category__label" for="editions_check_public">Публицистика</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_guide">
+              <label class="category__label" for="editions_check_guide">Путеводители</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_philos">
+              <label class="category__label" for="editions_check_philos">Философия</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_educat">
+              <label class="category__label" for="editions_check_educat">Учебная литература</label>
+            </li>
+            <li class="category__item">
+              <input type="checkbox" class="category__check" id="editions_check_news">
+              <label class="category__label" for="editions_check_news">Журналы и газеты</label>
+            </li>
+          </ul>
+          <label for="" class="label editions__label editions__label--price">Цена</label>
+          <div class="editions__price">
+            <span>От</span>
+            <input class="editions__input" type="number">
+            <span>до</span>
+            <input class="editions__input" type="number">
+            <span>руб.</span>
+          </div>
+        </div>
+        <div class="editions__right swiper" id="editions_swiper">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="editions__cards list-reset swiper-wrapper">
+            <div class="editions__card swiper-slide">
+              <img src="images/editions/img-1.jpg" alt="Искусство цвета" class="editins_img">
+              <div class="editions__descr-wrap">
+                <div class="editions__descr">
+                  <p class="editons__painting">Искусство цвета</p>
+                  <span class="editions__author">Иттен, Иоханнес</span>
+                </div>
+                <span class="editions__cost">620 руб</span>
+              </div>
+              <a href="#" class="btn editions__link">Заказать</a>
+            </div>
+
+            <div class="editions__card swiper-slide">
+              <img src="images/editions/img-2.jpg" alt="Типографика" class="editins_img">
+              <div class="editions__descr-wrap">
+                <div class="editions__descr">
+                  <p class="editons__painting">Типографика</p>
+                  <span class="editions__author">Рудер, Эмиль</span>
+                </div>
+                <span class="editions__cost">2 450 руб</span>
+              </div>
+              <a href="#" class="btn editions__link">Заказать</a>
+            </div>
+
+            <div class="editions__card swiper-slide">
+              <img src="images/editions/img-3.jpg" alt="Книга про буквы" class="editins_img">
+              <div class="editions__descr-wrap">
+                <div class="editions__descr">
+                  <p class="editons__painting">Книга про буквы</p>
+                  <span class="editions__author">Гордон, Юрий</span>
+                </div>
+                <span class="editions__cost">2 200 руб</span>
+              </div>
+              <a href="#" class="btn editions__link">Заказать</a>
+            </div>
+
+            <div class="editions__card swiper-slide">
+              <img src="images/editions/img-4.jpg" alt="Николай Ильин" class="editins_img">
+              <div class="editions__descr-wrap">
+                <div class="editions__descr">
+                  <p class="editons__painting">Николай Ильин</p>
+                  <span class="editions__author">Кричевский, Владимир </span>
+                </div>
+                <span class="editions__cost">1 100 руб</span>
+              </div>
+              <a href="#" class="btn editions__link">Заказать</a>
+            </div>
+
+            <div class="editions__card swiper-slide">
+              <img src="images/editions/img-5.jpg" alt="Модульные сетки в граф..." class="editins_img">
+              <div class="editions__descr-wrap">
+                <div class="editions__descr">
+                  <p class="editons__painting">Модульные сетки в граф...</p>
+                  <span class="editions__author">Мюллер-Брокманн, Йозеф</span>
+                </div>
+                <span class="editions__cost">1 450 руб</span>
+              </div>
+              <a href="#" class="btn editions__link">Заказать</a>
+            </div>
+
+            <div class="editions__card swiper-slide">
+              <img src="images/editions/img-6.jpg" alt="Эволюция графических ст..." class="editins_img">
+              <div class="editions__descr-wrap">
+                <div class="editions__descr">
+                  <p class="editons__painting">Эволюция графических ст...</p>
+                  <span class="editions__author">Хеллер, Чваст</span>
+                </div>
+                <span class="editions__cost">3 200 руб</span>
+              </div>
+              <a href="#" class="btn editions__link">Заказать</a>
+            </div>
+
+            <div class="editions__card swiper-slide">
+              <img src="images/editions/img-1.jpg" alt="Искусство и визуальное в..." class="editins_img">
+              <div class="editions__descr-wrap">
+                <div class="editions__descr">
+                  <p class="editons__painting">Искусство и визуальное в...</p>
+                  <span class="editions__author">Арнхейм, Рудольф</span>
+                </div>
+                <span class="editions__cost">2 200 руб</span>
+              </div>
+              <a href="#" class="btn editions__link">Заказать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END === EDITIONS === -->
+
+    <!-- BEGIN === PROJECTS === -->
+    <section class="section projects">
+      <div class="container projects__container">
+        <h2 class="section__title projects__title">Проекты</h2>
+        <p class="projects__descr">
+          Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей
+          деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А&nbsp;ещё независимые
+          государства смешаны с&nbsp;не&nbsp;уникальными данными до степени совершенной неузнаваемости, из-за чего
+          возрастает их&nbsp;статус бесполезности. Прежде всего, постоянное информационно&nbsp;-&nbsp;пропагандистское<span></span> обеспечение
+          нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений.
+          И&nbsp;нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span></span> исключительно в&nbsp;разрезе
+          маркетинговых и&nbsp;финансовых <span></span> предпосылок. Банальные, но&nbsp;неопровержимые выводы, а&nbsp;также
+          представители современных социальных резервов призывают нас к&nbsp;новым свершениям, которые, в&nbsp;свою
+          очередь, должны быть смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени совершенной неузнаваемости.
+          Подробнее: <a href="#" target="_blank">blanchard-art.ru/projects/about</a>
+        </p>
+        <p class="projects__subtitle">Партнёры проектов:</p>
+        <div class="project__swiper swiper" id="project_swiper">
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>  
+          <ul class="projects__list list-reset swiper-wrapper">
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+                <img class="projects__img" src="images/projects/ff.png" alt="Freelands Logo">
+              </div>
+            </li>
+
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+                <img class="projects__img" src="images/projects/ifca.png" alt="Institute for Contemporary Art Logo">
+              </div>
+            </li>
+
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+                <img class="projects__img" src="images/projects/workhouse.png" alt="Wrokhouse Logo">
+              </div>
+            </li>
+
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+                <img class="projects__img" src="images/projects/1849.png" alt="1849 Logo">
+              </div>
+            </li>
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+               <img class="projects__img" src="images/projects/hiscox.png" alt="Hiscox Logo">
+              </div>
+            </li>
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+                <img class="projects__img" src="images/projects/camden.png" alt="Camden Logo">
+              </div>
+            </li>
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+                <img class="projects__img" src="images/projects/stassen.png" alt="Stassen Logo">
+              </div>
+            </li>
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+               <img class="projects__img" src="images/projects/watts.png" alt="Watts Gallery Logo">
+              </div>
+            </li>
+            <li class="projects__item swiper-slide">
+              <div class="projects__card">
+                <img class="projects__img" src="images/projects/esad.png" alt="ESAD Logo">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- END === PROJECTS === -->
+
+    <!-- BEGIN === CONTACTS === -->
+    <section class="section contacts">
+      <div class="container contacts__container">
+        <h2 class="section__title contacts__title">Контакты</h2>
+        <div class="contacts__wrap flex">
+          <div class="contacts__left">
+            <address class="contacts__address">
+              <p class="contacts__place">Шоурум №4</p>
+              <span class="contacts__addr">Леонтьевский переулок, дом&nbsp;5, строение&nbsp;1</span>
+            </address>
+            <form class="contacts__feedback feedback" action="POST">
+              <p class="feedback__title">Заказать обратный звонок</p>
+              <input class="feedback__input feedback__input--name" id="feedback_name" type="text" placeholder="Имя*">
+              <input class="feedback__input feedback__input--phone" id="feedback_phone" type="tel" name="phone" placeholder="Телефон*">
+              <button class="btn feedback__btn">Заказать</button>
+            </form>
+            <div class="contacts__contact contact">
+              <p class="contact__title">Связаться в&nbsp;один клик</p>
+              <ul class="contact__list list-reset flex">
+                <li class="contackt__item"><a href="#" class="contact__link contact__link--wh"></a></li>
+                <li class="contackt__item"><a href="#" class="contact__link contact__link--tg"></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="contacts__map" id="contacts_map"></div>
+        </div>
+      </div>
+    </section>
+    <!-- END === CONTACTS === -->
+  </main>
+
+  <!-- BEGIN === FOOTER === -->
+  <footer class="footer">
+    <div class="container footer__container flex">
+      <a href="#" class="footer__link">
+        <svg class="logo footer__logo">
+        <use xlink:href="images/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <ul class="footer__list list-reset flex">
+        <li class="footer__item">
+          <a href="#" class="footer__social footer__social--vk">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__social footer__social--ig">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#ig"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="footer__item">
+          <a href="#" class="footer__social footer__social--fb">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#fb"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+  <!-- END === FOOTER === -->
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script src="vendor.js" defer></script>
+<script src="app.js" defer></script>
+
+</html>

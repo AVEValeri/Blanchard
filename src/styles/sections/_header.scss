@@ -1,0 +1,74 @@
+.header {
+  position: relative;
+  z-index: 10;
+  padding: 29px 0;
+  background-color: $--color-black;
+}
+
+.header__container {
+  align-items: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.header__link {
+  margin-right: 173px;
+  // &:hover #card {
+  //   fill: blue
+  // }
+}
+
+.header__nav {
+  margin-right: auto;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+  padding: 3px;
+  &:not(:last-child) {
+    margin-right: 52px;
+  }
+}
+
+.nav__link {
+  padding: 2px;
+  color: $--color-white;
+  transition: color .1s linear;
+  &:hover {
+    color: $--color-helio;
+    transition: color .1s linear;
+  }
+  &:active {
+    color: $--color-royal-purple;
+  }
+  &:focus-visible {
+    outline: 2px solid $--color-royal-purple;
+  }
+}
+
+.header__login {
+  font-weight: 400;
+  color: $--color-white;
+  transition: color .1s linear;
+  &:hover {
+    color: $--color-helio;
+    transition: color .1s linear;
+  }
+  &:hover .header__icon use {
+    fill: $--color-helio;
+    transition: color .1s linear;
+  }
+  &:active {
+    color: $--color-accent;
+  }
+}
+
+.header__icon {
+  width: 13px;
+  height: 13px;
+}

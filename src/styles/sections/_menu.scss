@@ -1,0 +1,106 @@
+.menu {
+  position: relative;
+  z-index: 10;
+  padding: 20px 0 19px;
+  margin: 0;
+  background: rgba($color: #000, $alpha: .4);
+}
+
+.menu__list {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 1;
+}
+
+.menu__item {
+  position: relative;
+  &:not(:last-child) {
+    margin-right: 113px;
+  }
+  &:nth-last-child(2) {
+    margin-right: 330px;
+  }
+}
+
+.menu__link {
+  position: relative;
+  padding: 5px 0;
+  color: $--color-white;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -9px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border: 1px solid $--color-white;
+    border-top: transparent;
+    border-left: transparent;
+    display: inline-block;
+    transform: rotate(45deg) translateY(-50%);
+  }
+}
+
+.menu__search-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.menu__search {
+  padding: 5px 0;
+  width: 218px;
+  border-bottom: 1px solid $--color-white;
+  &::placeholder {
+    line-height: 1;
+    font-size: 18px;
+    color: rgba($color: #fff, $alpha: .85);
+  }
+}
+
+.menu__search-icon {
+  margin-right: 8px;
+  width: 22px;
+  height: 22px;
+}
+
+// BEGIN ===== Dropdown ===== //
+.menu-dropdown__list {
+  position: absolute;
+  top: 44px;
+  display: none;
+  padding: 40px;
+  background: rgba($color: #000, $alpha: .6);
+}
+
+.menu-dropdown__item {
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.menu-dropdown__link {
+  display: inline-block;
+  padding: 13px 15px 13px 13px;
+  width: 220px; 
+  color: $--color-white;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 1.1px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.menu__link:hover::after {
+  border-top: 1px solid $--color-white;
+  border-left: 1px solid $--color-white;
+  border-bottom: transparent;
+  border-right: transparent;
+}
+
+.menu__link:hover + .menu-dropdown__list {
+  display: block;
+}
+// END ===== Dropdown ===== //
