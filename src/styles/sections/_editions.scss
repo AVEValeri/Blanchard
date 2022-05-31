@@ -1,4 +1,5 @@
 .editions {
+  padding-bottom: 70px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,7 +17,7 @@
 // BEGIN === Editions Left //
 .editions__left {
   // display: inline-block;
-  margin-right: 10%;
+  margin-right: 9%;
   width: 18%;
 }
 .editions__title {
@@ -34,7 +35,7 @@
 
 .editions__label--price {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 .category__list {
@@ -42,7 +43,7 @@
 }
 
 .category__check {
-  display: none;
+  appearance: none;
   &:checked + .category__label::before {
     border-color: $--color-accent;
     transition: border-color .1s linear;
@@ -51,19 +52,22 @@
     background-color: $--color-accent;
     transition: background-color .1s linear;
   }
+  &:focus-visible + .category__label {
+    outline: 1px solid $--color-royal-purple;
+    outline-offset: 3px;
+  }
 }
 
 .category__label {
   position: relative;
-  padding-left: 24px;
-  &:hover {
-    cursor: pointer;
-  }
+  left: -5px;
+  padding-left: 25px;
+  transition: color .1s linear;
   &::before {
     content: '';
     position: absolute;
     top: 50%;
-    left: 0;
+    left: 1px;
     width: 12px;
     height: 12px;
     border: 1px solid $--color-white;
@@ -74,13 +78,25 @@
     content: '';
     position: absolute;
     top: 50%;
-    left: 4px;
+    left: 5px;
     width: 4px;
     height: 4px;
     border-radius: 100%;
     background-color: transparent;
     transform: translateY(-50%);
     transition: background-color .15s linear;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $--color-accent;
+    transition: color .1s linear;
+  }
+  &:active {
+    color: $--color-royal-purple;
+    transition: color .1s linear;
+    &::before {
+      border-color: $--color-royal-purple;
+    }
   }
 }
 
@@ -104,7 +120,7 @@
 
 // BEGIN === Editions Right //
 .editions__right {
-  padding-top: 94px;
+  padding: 63px 0 10px 10px;
   width: 72%;
 }
 .editins_img {
@@ -118,7 +134,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
 }
 
 .editons__painting {
@@ -135,5 +151,32 @@
   padding: 6px 18px;
   font-size: 16px;
   color: $--color-white;
+  &:hover {
+    background-color: $--color-accent;
+    color: $--color-white;
+    transition: all .1s linear;
+  }
+  &:focus-visible {
+    outline: 2px solid $--color-helio;
+    outline-offset: 5px;
+  }
+  &:active {
+    background-color: $--color-royal-purple;
+    box-shadow: none;
+  }
+}
+
+.editions-swiper {
+  .swiper__nav {
+    top: -7px;
+    left: -10px;
+  }
+  .swiper-button-prev {
+    margin-right: 30px;
+  }
+  .swiper-pagination {
+    bottom: 22px;
+    margin-right: 30px;
+  }
 }
 // END === Editions Right

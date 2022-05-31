@@ -17,5 +17,11 @@
   svg {
     width: 45px;
     height: 45px;
+    fill: #cacaca;
+    transition: color .1s linear;
+    &:hover {
+      fill: $--color-white;
+      transition: color .1s linear;
+    }
   }
 }

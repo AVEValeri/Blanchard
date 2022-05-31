@@ -13,6 +13,7 @@ const uglify = require('gulp-uglify-es').default
 const sourcemaps = require('gulp-sourcemaps')
 const del = require('del')
 const browserSync = require('browser-sync').create()
+const cheerio = require('gulp-cheerio')
 
 const clean = () => {
   return del(['dist'])
@@ -57,11 +58,19 @@ const htmlMinify = () => {
 
 const svgSprites = () => {
   return src('src/images/svg/**/*.svg')
+    .pipe(cheerio({
+      run: function ($) {
+        $('[fill]').removeAttr('fill');
+        $('[stroke]').removeAttr('stroke');
+        $('[style]').removeAttr('style');
+      },
+      parserOptions: {xmlMode: true}
+    }))
     .pipe(svgSprite({
       mode: {
         stack: {
           sprite: '../sprite.svg'
-        }
+        },
       }
     }))
     .pipe(dest('dist/images'))

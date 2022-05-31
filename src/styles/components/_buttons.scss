@@ -5,4 +5,21 @@
   font-weight: 700;
   font-size: 18px;
   color: $--color-accent;
+  transition: all .1s linear;
+  &:hover {
+    background-color: $--color-accent;
+    color: $--color-white;
+    transition: all .1s linear;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: $--color-royal-purple;
+    box-shadow: 0 0 0 3px #d1a9f0;
+    transition: all .1s linear;
+  }
+  &:focus-visible {
+    outline: 2px solid $--color-helio;
+    outline-offset: 5px;
+    transition: all .1s linear;
+  }
 }

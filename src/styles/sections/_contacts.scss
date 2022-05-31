@@ -58,6 +58,14 @@
   &::placeholder {
     color: #999999;
   }
+  &:hover {
+    border-color: $--color-accent;
+  }
+  &:focus-visible {
+    outline: 1px solid $--color-royal-purple;
+    outline-offset: 3px;
+    border-color: $--color-royal-purple;
+  }
 }
 
 .feedback__btn {

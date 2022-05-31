@@ -7,6 +7,7 @@ html {
   box-sizing: border-box;
   font-family: "OpenSans";
   font-weight: 400;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -46,6 +47,7 @@ input {
   padding: 0;
   background: none;
   border: none;
+  outline: 0;
 }
 
 .is-hidden {
@@ -74,6 +76,13 @@ input {
   width: 1px;
   height: 1px;
   clip: rect(0 0 0 0);
+}
+
+.invisible {
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 .container {

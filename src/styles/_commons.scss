@@ -13,4 +13,83 @@
 .logo {
   width: 173px;
   height: 39px;
+  fill: $--color-white;
+}
+
+.swiper-button {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: #666;
+  border-radius: 100%;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border: 1px solid $--color-white;
+    border-top: transparent;
+    border-right: transparent;
+    transform: translate(-50%, -50%) rotate(45deg);
+    transition: all .1s linear;
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $--color-royal-purple;
+    transition: all .1s linear;
+    outline: 0;
+  }
+  &:hover {
+    background-color: $--color-accent;
+    transition: all .1s linear;
+  }
+  &:active {
+    box-shadow: 0 0 0 2px #d1a9f0;
+    background-color: $--color-royal-purple;
+    transition: all .1s linear;
+  }
+}
+.swiper-button-next {
+  &::after {
+    border: 1px solid $--color-white;
+    border-bottom: transparent;
+    border-left: transparent;
+    left: 45%;
+  }
+}
+
+.accordion-open {
+  .accordion__content {
+    display: flex !important;
+  }
+}
+
+.swiper__nav {
+  position: relative;
+  display: flex;
+  top: 0;
+  left: 0;
+}
+
+.swiper-pagination {
+  position: relative;
+  width: initial;
+}
+
+.tippy-box {
+  border-radius: 0;
+  font-size: 12px;
+  text-align: center;
+  background-color: #cacaca;
+}
+
+.tippy-arrow {
+  color: #cacaca;
+}
+
+[class*="ground-pane"] {
+  filter: grayscale(1);
 }

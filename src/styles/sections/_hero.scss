@@ -33,4 +33,17 @@
   border: none;
   background-color: $--color-accent;
   color: $--color-white;
+  transition: box-shadow .1s linear;
+  &:hover {
+    box-shadow: 0 0 0 3px #d1a9f0;
+    transition: box-shadow .1s linear background-color .1s linear;
+  }
+  &:focus-visible {
+    outline: 2px solid #d1a9f0;
+    outline-offset: 5px;
+  }
+  &:active {
+    background-color: $--color-royal-purple;
+    transition: background-color .1s linear;
+  }
 }

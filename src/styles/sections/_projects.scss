@@ -25,12 +25,28 @@
       color: $--color-white;
       display: inline-block;
     }
+    &:hover {
+      cursor: pointer;
+    }
   }
   a {
     font-weight: 600;
     font-size: 16px;
     line-height: 32px;
     color: $--color-accent;
+    &:hover {
+      // text-shadow: 0 0 1px $--color-accent;
+      border-bottom: 1px solid $--color-accent;
+      transition: all .1s linear;
+    }
+    &:active {
+      // text-shadow: 0 0 1px $--color-royal-purple;
+      border-bottom: 1px solid $--color-royal-purple;
+    }
+    &:focus-visible {
+      outline: 2px solid $--color-royal-purple;
+      outline-offset: 3px;
+    }
   }
 }
 
@@ -40,6 +56,20 @@
   font-size: 24px;
   line-height: 32px;
   color: $--color-jet;
+}
+.project__swiper-wrap {
+  position: relative;
+  .swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(50%);
+  }
+  .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-next {
+    right: 0;
+  }
 }
 
 .project__swiper {

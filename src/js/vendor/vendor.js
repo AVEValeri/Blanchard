@@ -1,12 +1,4 @@
-// BEGIN === SELCET === //
-const element = document.getElementById('gallery_select');
 
-const choices = new Choices(element, {
-  searchEnabled: false,
-  itemSelectText: '',
-  duplicateItemsAllowed: false,
-});
-// END === SELCET === //
 
 // BEGIN === SWIPER === //
 const gallerySwiper = new Swiper(document.getElementById('gallery_swiper'), {
@@ -50,6 +42,14 @@ const projectsSwiper = new Swiper(document.getElementById('project_swiper'), {
 });
 // END === SWIPER === //
 
+// BEGIN === SIMPLEBAR === //
+const scrollers = document.querySelectorAll('.scroller');
+
+scrollers.forEach(scroller => {
+  new SimpleBar(scroller);
+})
+// END === SIMPLEBAR === //
+
 // BEGIN === MAP === //
 // Функция ymaps.ready() будет вызвана, когда
 // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
@@ -61,10 +61,10 @@ function init(){
       // Порядок по умолчанию: «широта, долгота».
       // Чтобы не определять координаты центра карты вручную,
       // воспользуйтесь инструментом Определение координат.
-      center: [55.76, 37.64],
+      center: [55.760808662009325,37.630061213019516],
       // Уровень масштабирования. Допустимые значения:
       // от 0 (весь мир) до 19.
-      zoom: 7
+      zoom: 14
   });
 }
 // END === MAP === //   
