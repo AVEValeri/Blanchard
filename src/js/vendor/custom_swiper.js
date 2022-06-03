@@ -2,10 +2,10 @@
 const heroSwiper = new Swiper(document.getElementById('hero_swiper'), {
   loop: true,
   slidesPerView: 1,
-  speed: 3000,
-  // autoplay: {
-  //   delay: 500,
-  // },
+  speed: 1000,
+  autoplay: {
+    delay: 10000,
+  },
   autoHeight: true,
 });
 
