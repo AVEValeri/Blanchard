@@ -61,12 +61,6 @@
   }
 }
 
-.accordion-open {
-  .accordion__content {
-    display: flex !important;
-  }
-}
-
 .swiper__nav {
   position: relative;
   display: flex;
@@ -77,6 +71,12 @@
 .swiper-pagination {
   position: relative;
   width: initial;
+}
+
+.accordion-open {
+  .accordion__content {
+    display: flex !important;
+  }
 }
 
 .tippy-box {
@@ -90,6 +90,17 @@
   color: #cacaca;
 }
 
-[class*="ground-pane"] {
+ymaps[class*="ground-pane"] {
   filter: grayscale(1);
+}
+
+ymaps[class*="copyrights-pane"] {
+  display: none;
+}
+
+ymaps[class*="zoom__scale"] {
+  display: none;
+}
+ymaps[class*="-zoom__plus"] {
+  top: 140px;
 }

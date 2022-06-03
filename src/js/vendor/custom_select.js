@@ -18,3 +18,4 @@ function removeSelectedValue() {
   console.log(selectValue.length);
 }
 // END === REMOVE SELECTED VALUE === //
+

@@ -1,14 +1,14 @@
 .hero {
-  padding-top: 241px;
-  position: absolute;
-  top: 0;
-  height: 800px;
-  width: 100%;
+  position: relative;
+  top: 8px;
+  padding: 0;
   color: $--color-white;
-  background-image: url(../images/bg_1920.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.hero__container {
+  position: absolute;
+  top: 232px;
+  z-index: 10;
 }
 
 .title {

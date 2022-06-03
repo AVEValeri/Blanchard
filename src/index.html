@@ -58,7 +58,7 @@
   <!-- END === HEADER === -->
 
   <!-- BEGIN === MENU === -->
-  <menu class="menu" type="toolbar">
+  <div class="menu">
     <div class="container menu__container flex">
       <ul class="menu__list list-reset" id="menu_list">
         <li class="menu__item">
@@ -216,12 +216,25 @@
         <input class="menu-search__input" id="menu_search_input" type="search" name="site-search" placeholder="Поиск по сайту" />
       </div>
     </div>
-  </menu>
+  </div>
   <!-- END === MENU === -->
 
   <main class="main">
     <!-- BEGIN === HERO === -->
     <section class="section hero">
+      <div class="swiper hero-swiper" id="hero_swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/bg_1920.jpg" alt="" class="hero__background">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/bg_1920_2.jpg" alt="" class="hero__background">
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/bg_1920_3.jpg" alt="" class="hero__background">
+          </div>
+        </div>
+      </div>
       <div class="container hero__container">
         <h1 class="title hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
         <p class="hero__descr">
@@ -1652,7 +1665,7 @@
       <div class="container editions__container">
         <div class="editions__left">
           <h2 class="section__title editions__title">Издания</h2>
-          <label for="" class="label editions__label">Категории</label>
+          <span class="label editions__label">Категории</span>
           <ul class="editions__category category__list list-reset">
             <li class="category__item">
               <input type="checkbox" class="category__check" id="editions_check_best">
@@ -1703,7 +1716,7 @@
               <label class="category__label" for="editions_check_news">Журналы и газеты</label>
             </li>
           </ul>
-          <label for="" class="label editions__label editions__label--price">Цена</label>
+          <span class="label editions__label editions__label--price">Цена</span>
           <div class="editions__price">
             <span>От</span>
             <input class="editions__input" type="number">
@@ -1832,50 +1845,68 @@
             <ul class="projects__list list-reset swiper-wrapper">
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                  <img class="projects__img" src="images/projects/ff.png" alt="Freelands Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/ff.png" alt="Freelands Logo">
+                  </a>
                 </div>
               </li>
   
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                  <img class="projects__img" src="images/projects/ifca.png" alt="Institute for Contemporary Art Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/ifca.png" alt="Institute for Contemporary Art Logo">
+                  </a>
                 </div>
               </li>
   
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                  <img class="projects__img" src="images/projects/workhouse.png" alt="Wrokhouse Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/workhouse.png" alt="Wrokhouse Logo">
+                  </a>
                 </div>
               </li>
   
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                  <img class="projects__img" src="images/projects/1849.png" alt="1849 Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/1849.png" alt="1849 Logo">
+                  </a>
                 </div>
               </li>
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                 <img class="projects__img" src="images/projects/hiscox.png" alt="Hiscox Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/hiscox.png" alt="Hiscox Logo">
+                  </a>
                 </div>
               </li>
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                  <img class="projects__img" src="images/projects/camden.png" alt="Camden Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/camden.png" alt="Camden Logo">
+                  </a>
                 </div>
               </li>
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                  <img class="projects__img" src="images/projects/stassen.png" alt="Stassen Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/stassen.png" alt="Stassen Logo">
+                  </a>
                 </div>
               </li>
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                 <img class="projects__img" src="images/projects/watts.png" alt="Watts Gallery Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/watts.png" alt="Watts Gallery Logo">
+                  </a>
                 </div>
               </li>
               <li class="projects__item swiper-slide">
                 <div class="projects__card">
-                  <img class="projects__img" src="images/projects/esad.png" alt="ESAD Logo">
+                  <a href="" class="projects__link">
+                    <img class="projects__img" src="images/projects/esad.png" alt="ESAD Logo">
+                  </a>
                 </div>
               </li>
             </ul>
@@ -1950,16 +1981,14 @@
     </div>
   </footer>
   <!-- END === FOOTER === -->
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js" defer></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_API-ключ&lang=ru_RU" defer></script>
+  <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js" defer></script>
+  <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js" defer></script>
+  
+  <script src="vendor.js" defer></script>
+  <script src="app.js" defer></script>
 </body>
-
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js" defer></script>
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" defer></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript" defer></script>
-<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js" defer></script>
-<script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js" defer></script>
-
-<script src="vendor.js" defer></script>
-<script src="app.js" defer></script>
-
 </html>

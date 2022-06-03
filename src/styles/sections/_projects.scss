@@ -78,9 +78,19 @@
   max-width: 1450px;
 }
 
-.projects__card {
+.projects__link {
+  display: block;
   padding: 40px 0px;
   border: 1px solid #cacaca;
+  transition: all .2s ease-in-out;
+  &:hover {
+    border-color: $--color-accent;
+    transition: all .2s ease-in-out;
+    .projects__img {
+      filter: opacity(100%) grayscale(0);
+      transition: all .2s ease-in-out;
+    }
+  }
 }
 
 .projects__img {
@@ -88,4 +98,5 @@
   margin: 0 auto;
   height: 68px;
   filter: opacity(35%) grayscale(100%);
+  transition: all .2s ease-in-out;
 }
