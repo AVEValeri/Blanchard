@@ -14,6 +14,7 @@ const sourcemaps = require('gulp-sourcemaps')
 const del = require('del')
 const browserSync = require('browser-sync').create()
 const cheerio = require('gulp-cheerio')
+const fileinclude = require('gulp-file-include')
 
 const clean = () => {
   return del(['dist'])
@@ -48,7 +49,11 @@ const styles = () => {
 }
 
 const htmlMinify = () => {
-  return src('src/**/*html')
+  return src('src/index.html')
+    .pipe(fileinclude({
+      prefix: '@',
+      basepath: '@file'
+    }))
     .pipe(htmlMin({
       collapseWhitespace: true
     }))

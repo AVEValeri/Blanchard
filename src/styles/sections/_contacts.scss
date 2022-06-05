@@ -4,6 +4,7 @@
 
 .contacts__container {
   padding: 0;
+  max-width: inherit;
 }
 
 .contacts__title {
@@ -100,6 +101,6 @@
 }
 
 .contacts__map {
-  width: 1220px;
+  width: 1235px;
   height: 700px;
 }

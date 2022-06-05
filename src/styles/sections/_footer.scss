@@ -1,9 +1,12 @@
+.footer {
+  background-color: $--color-black;
+}
+
 .footer__container {
   padding-top: 45px;
   padding-bottom: 45px;
   align-items: center;
   justify-content: space-between;
-  background-color: $--color-black;
 }
 
 .footer__item {

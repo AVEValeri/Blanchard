@@ -4,10 +4,14 @@
 @include font-face-it ('OpenSans', 'OpenSans-Italic', 400);
 
 html {
-  box-sizing: border-box;
+  box-sizing: border-box;  
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 320px;
   font-family: "OpenSans";
   font-weight: 400;
-  scroll-behavior: smooth;
 }
 
 *,
@@ -86,9 +90,9 @@ input {
 }
 
 .container {
-  padding: 0 150px;
+  padding: 0 15px;
   margin: 0 auto;
-  max-width: 1920px;
+  max-width: 1630px;
 }
 
 .flex {
