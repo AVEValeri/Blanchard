@@ -3,15 +3,20 @@
 }
 
 .footer__container {
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding: 45px 15px;
   align-items: center;
   justify-content: space-between;
+  @include laptop {
+    padding: 40px 15px 37px;
+  }
 }
 
 .footer__item {
   &:not(:last-child) {
     margin-right: 20px;
+    @include laptop {
+      margin-right: 30px;
+    }
   }
 }
 
@@ -22,8 +27,25 @@
     height: 45px;
     fill: #cacaca;
     transition: color .1s linear;
-    &:hover {
+    @include laptop {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &:hover {
+    svg {
       fill: $--color-white;
+      transition: color .1s linear;
+    }
+  }
+  &:focus-visible {
+    svg {
+      fill: $--color-white;
+    }
+  }
+  &:active {
+    svg {
+      fill: $--color-accent;
       transition: color .1s linear;
     }
   }

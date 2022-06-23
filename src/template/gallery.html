@@ -1,21 +1,35 @@
 <section class="section gallery" id="gallery">
   <div class="container gallery__container">
     <div class="gallery__left">
-      <h2 class="section__title gallery__title">Галерея</h2>
-      <label for="gallery_select" class="label gallery__label">Фильтровать&nbsp;по:</label>
-      <select class="select" name="gallery-sort" id="gallery_select">
-        <option value="author">Автор</option>
-        <option value="direct">Направление</option>
-        <option value="tech">Техника</option>
-      </select>
-      <p class="gallery__descr">Вам предоставляется 10&nbsp;бесплатных скачиваний. Для увеличения количества
-        скачиваний <a href="">авторизуйтесь</a>, либо воспользуйтесь лицензией.</p>
+      <div class="gallery__wrap">
+        <h2 class="section__title gallery__title">Галерея</h2>
+        <label for="gallery_select" class="label gallery__label">Фильтр:</label>
+        <select class="select" name="gallery-sort" id="gallery_select">
+          <option value="painting">Живопись</option>
+          <option value="picture">Рисунок</option>
+          <option value="sculpture">Скульптура</option>
+        </select>
+      </div>
+      <ul class="gallery__check gallery-check__list list-reset">
+        <li class="gallery-check__item">
+          <input type="checkbox" class="site__check" id="editions_check_XIX">
+          <label class="site__label" for="editions_check_XIX">XIX век</label>
+        </li>
+        <li class="gallery-check__item">
+          <input type="checkbox" class="site__check" id="editions_check_XX">
+          <label class="site__label" for="editions_check_XX">XX век</label>
+        </li>
+        <li class="gallery-check__item">
+          <input type="checkbox" class="site__check" id="editions_check_modern">
+          <label class="site__label" for="editions_check_modern">Современность</label>
+        </li>
+      </ul>
     </div>
     <div class="gallery__right swiper gallery-swiper" id="gallery_swiper">
       <div class="swiper__nav">
-        <div class="swiper-button swiper-button-prev" tabindex="1"></div>
+        <div class="swiper-button swiper-button-prev swiper-button-prev--galery" tabindex="1"></div>
         <div class="swiper-pagination"></div>
-        <div class="swiper-button swiper-button-next" tabindex="1"></div>
+        <div class="swiper-button swiper-button-next swiper-button-next--galery" tabindex="1"></div>
       </div>
       <div class="gallery__pictures swiper-wrapper">
         <div class="swiper-slide">
@@ -35,78 +49,6 @@
         </div>
         <div class="swiper-slide">
           <img src="images/gallery/pict-6.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-7.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-8.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-9.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-10.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-11.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-12.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-13.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-14.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-15.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-16.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-17.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-18.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-19.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-20.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-21.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-22.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-23.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-24.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-25.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-26.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-27.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-28.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-29.jpg" alt="Картина" class="gallery__pict">
-        </div>
-        <div class="swiper-slide">
-          <img src="images/gallery/pict-30.jpg" alt="Картина" class="gallery__pict">
         </div>
       </div>
     </div>

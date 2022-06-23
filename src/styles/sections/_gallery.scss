@@ -1,4 +1,5 @@
 .gallery {
+  padding-bottom: 75px;
   color: $--color-white;
   background-size: cover;
   background-repeat: no-repeat;
@@ -7,14 +8,43 @@
 }
 .gallery__container {
   display: flex;
+  @include tablet {
+    flex-direction: column;
+  }
 }
 
 .gallery__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   margin-right: 50px;
   width: 25%;
+  transition: background-color .1s linear;
+  @include laptop {
+    padding-bottom: 36px;
+    width: 34%;  
+  }
+  @include tablet {
+    padding-bottom: 10px;
+    width: 42%;
+  }
   .choices {
-    width: 400px;
+    width: 100%;
+    @include tablet {
+      margin-bottom: 45px;
+    }
+    &:hover {
+      background-color: rgba($color: #fff, $alpha: .2);
+      transition: background-color .1s linear;
+    }
+    &:focus-visible {
+      background-color: rgba($color: #fff, $alpha: .2);
+      transition: background-color .1s linear;
+    }
+  }
+  .choices.is-open {
+    background-color: rgba($color: #fff, $alpha: 0);
   }
   .choices__inner {
     padding-left: 9px;
@@ -31,10 +61,14 @@
   }
   .choices__list--dropdown, .choices__list[aria-expanded] {
     background-color: transparent;
+    @include tablet {
+      background-color: $--color-black;
+    }
   }
   .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
-    background-color: transparent;
-    color: $--color-accent;
+    background-color: rgba($color: #fff, $alpha: .2);
+    color: $--color-white;
+    transition: all .1s linear;
   }
   .choices__list--dropdown, .choices__list[aria-expanded] {
     border-color: $--color-gray;
@@ -56,8 +90,21 @@
   }
 }
 
+.gallery-check__list {
+  padding-bottom: 10px;
+}
+
+.gallery-check__item {
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
+}
+
 .gallery__right {
   width: 72%;
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .gallery__title {
@@ -114,10 +161,15 @@
 }
 
 .gallery__pictures {
-  height: 750px;
   padding-top: 69px;
-  .swiper-slide {
-    height: calc((100% - 60px)/2);
+}
+
+.gallery__pict {
+  @include laptop {
+    height: 315px;
+  }
+  @include tablet {
+    height: 332px;
   }
 }
 

@@ -7,6 +7,9 @@
   margin: 0;
   padding: 0;
   background: rgba($color: #000, $alpha: .4);
+  @include laptop {
+    display: none;
+  }
 }
 
 .menu__container {
@@ -16,12 +19,17 @@
 }
 
 .menu__list {
+  position: relative;
+  left: -5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 64%;
+  width: 65%;
   font-size: 18px;
   line-height: 1;
+  @include notebook {
+    width: 70%;
+  }
 }
 
 .menu__item {
@@ -31,14 +39,13 @@
 
 .menu__link {
   position: relative;
-  padding: 5px 0;
-  padding-right: 13px;
+  padding: 5px 20px 5px 5px;
   color: $--color-white;
   transition: color .1s linear;
   &::after {
     content: '';
     position: absolute;
-    right: 5px;
+    right: 10px;
     top: 50%;
     width: 7px;
     height: 7px;
@@ -58,8 +65,7 @@
     }
   }
   &:focus-visible {
-    outline: 2px solid $--color-royal-purple;
-    outline-offset: 5px;
+    background-color:  $--color-royal-purple;
   }
   &:active {
     color: $--color-royal-purple;
@@ -70,66 +76,6 @@
       border-right: transparent;
       top: 60%;
     }
-  }
-}
-
-.menu-search {
-  position: relative;
-  display: flex;
-  transition: all .1s linear;
-  &:hover {
-    cursor: pointer;
-    .menu-search__input {
-      border-bottom: 1px solid $--color-helio;
-      transition: all .1s linear;
-    }
-    .menu-search__icon {
-      fill: $--color-helio;
-      transition: all .1s linear;
-    }
-  }
-  &:focus-visible {
-    outline: 2px solid $--color-royal-purple;
-    outline-offset: 5px;
-  }
-}
-
-.menu-search__btn {
-  position: absolute;
-  left: -31px;
-  top: 8px;
-  &:focus-visible {
-    outline: 2px solid $--color-royal-purple;
-    outline-offset: 5px;
-  }
-}
-
-.menu-search__icon {
-  width: 22px;
-  height: 22px;
-  fill: $--color-white;
-}
-
-.menu-search__input {
-  padding: 5px 0;
-  margin: 3px 5px 0 0;
-  width: 218px;
-  border-bottom: 1px solid $--color-white;
-  color: $--color-white;
-  &::placeholder {
-    line-height: 1;
-    font-size: 18px;
-    color: rgba($color: #fff, $alpha: .85);
-  }
-  &:focus-visible {
-    outline: none;
-    caret-color: $--color-helio;
-  }
-  &:focus::placeholder {
-    color: transparent;
-  }
-  &:active {
-    outline: 0;
   }
 }
 

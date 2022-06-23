@@ -1,62 +1,107 @@
 .events {
-  padding-top: 0;
+  padding: 0;
+}
+.events__container {
+  position: relative;
 }
 
 .events__title {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
+  @include tablet {
+    margin-bottom: 22px;
+    line-height: 1;
+  }
 }
 
-.events__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 30px;
+.swiper-button-next--events {
+  position: absolute;
+  right: -10px;
+  top: 426px;
+  width: 50px;
+  height: 50px;
+  background-color: #ececec;
+  transition: all .1s linear;
+  &::after {
+    width: 12px;
+    height: 12px;
+    border-color: $--color-black;
+  }
+  &:hover {
+    transition: background-color .1s linear;
+    background-color: #d1a9f0;
+  }
+  &:focus-visible {
+    box-shadow: 0 0 0 2px $--color-accent;
+    transition: all .1s linear;
+    outline: 0;
+  }
+  &:active {
+    background-color: #d1a9f0;
+    box-shadow: 0 0 0 2px $--color-accent;
+    transition: all .1s linear;
+  }
 }
 
 .events__item {
-  &:nth-child(-n+3) {
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  min-height: 700px;
+  @include laptop {
+    min-height: 682px;
+    height: auto;
   }
 }
 
 .events__img {
   display: block;
-  width: 500px;
-  height: 300px;
+  @include laptop {
+    height: 200px;
+  }
 }
 
-.events__card-down {
-  position: relative;
-  padding: 14px 17px 40px 50px;
-  max-width: 500px;
-  min-height: 400px;
+.events__card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 14px 0 37px 50px;
   border: 1px solid $--color-gray;
   border-top: none;
-}
-
-.events__place {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: right;
-  color: $--color-gray;
+  @include notebook {
+    padding: 14px 33px 37px;
+  }
+  @include laptop {
+    padding-bottom: 43px;
+  }
+  @include tablet {
+    padding: 14px 17px 41px 37px;
+  }
 }
 
 .events__capt {
   display: block;
+  padding-right: 20px;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-  text-align: right;
   color: $--color-gray;
+  @include laptop {
+    padding-right: 0;
+    text-align: right;
+  }
 }
 
 .event__period {
-  margin-bottom: 3px;
+  margin-bottom: 10px;
+  @include laptop {
+    margin-bottom: 3px;
+  }
 }
 
 .events__subtitle {
-  margin-bottom: 4px;
+  margin-bottom: 10px;
+  max-width: 400px;
   font-weight: 600;
   font-size: 24px;
   line-height: 33px;
@@ -70,29 +115,78 @@
 }
 
 .events__link {
-  position: absolute;
-  bottom: 40px;
-  border-bottom: 1px solid $--color-accent;
+  position: relative;
+  display: inline-block;
+  padding: 5px 0;
+  max-width: max-content;
   color: $--color-accent;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
   transition: all .1s linear;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color:  $--color-accent;
+    bottom: 5px;
+  }
   &:hover {
-    text-shadow: 0 0 1px $--color-accent;
+    color: $--color-royal-purple;
     transition: all .1s linear;
+    &::before {
+      background-color:  $--color-royal-purple;
+      transition: all .1s linear;
+    }
   }
   &:active {
-    text-shadow: 0 0 1px $--color-royal-purple;
-    border-bottom: 1px solid $--color-royal-purple;
+    color: $--color-jet;
+    transition: all .1s linear;
+    &::before {
+      background-color:  $--color-jet;
+      transition: all .1s linear;
+    }
   }
   &:focus-visible {
-    outline: 2px solid $--color-royal-purple;
-    outline-offset: 3px;
+    color: $--color-white;
+    background-color:  $--color-royal-purple;
+    &::before {
+      background-color:  $--color-white;
+    }
   }
 }
 
 .events__btn {
   display: block;
   margin: 0 auto;
+}
+
+.events-swiper {
+  .swiper-pagination-horizontal {
+    margin: 0 auto;
+    margin-top: 7px;
+    width: max-content !important;
+    display: none;
+    @include laptop {
+      display: block;
+    }
+    @include tablet {
+      margin: 27px auto 0;
+    }
+  }
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #cacaca;
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #666;
+  }
+}
+
+.swiper-button-next--events {
+  @include laptop {
+    display: none;
+  }
 }

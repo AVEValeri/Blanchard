@@ -38,7 +38,7 @@
     transition: all .1s linear;
   }
   &:focus-visible {
-    box-shadow: 0 0 0 2px $--color-royal-purple;
+    box-shadow: 0 0 0 2px $--color-black;
     transition: all .1s linear;
     outline: 0;
   }
@@ -47,7 +47,7 @@
     transition: all .1s linear;
   }
   &:active {
-    box-shadow: 0 0 0 2px #d1a9f0;
+    box-shadow: 0 0 0 2px $--color-black;
     background-color: $--color-royal-purple;
     transition: all .1s linear;
   }

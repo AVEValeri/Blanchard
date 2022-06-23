@@ -1,14 +1,17 @@
 <header class="header">
   <div class="container header__container flex">
+    <button class="header__burger burger btn-reset" id="header_burger">
+      <span class="burger__line"></span>
+    </button>
     <a href="#" class="header__link">
       <svg class="logo header__logo">
       <use xlink:href="images/sprite.svg#logo"></use>
       </svg>
     </a>
-    <nav class="nav header__nav">
+    <nav class="header__nav nav" id="header_nav">
       <ul class="nav__list list-reset">
         <li class="nav__item">
-          <a href="#about_us" class="nav__link">О нас</a>
+          <a href="#about_us" class="nav__link">О&nbsp;нас</a>
         </li>
         <li class="nav__item">
           <a href="#gallery" class="nav__link">Галерея</a>
@@ -20,21 +23,35 @@
           <a href="#events" class="nav__link">События</a>
         </li>
         <li class="nav__item">
-          <a href="#editions" class="nav__link">Издания</a>
-        </li>
-        <li class="nav__item">
           <a href="#projects" class="nav__link">Проекты</a>
         </li>
         <li class="nav__item">
           <a href="#contacts" class="nav__link">Контакты</a>
         </li>
       </ul>
+      <a href="#" class="header__login header__login--nav">
+        <svg class="header__icon">
+          <use xlink:href="images/sprite.svg#login"></use>
+        </svg>
+        Войти
+      </a>
     </nav>
+
     <a href="#" class="header__login">
       <svg class="header__icon">
       <use xlink:href="images/sprite.svg#login"></use>
       </svg>
       Войти
     </a>
+
+    <div class="search__wrap search__wrap--header" tabindex="0" >
+      <button class="btn-reset search__btn">
+        <svg class="search__icon search__icon--header" id="header_search_icon">
+          <use xlink:href="images/sprite.svg#search"></use>
+        </svg>
+      </button>
+      <input class="search__input search__input--header" id="header_search_input" type="search" name="site-search"/>
+      <span class="cross is-hidden" id="header_search_hide"></span>
+    </div>
   </div>
 </header>
