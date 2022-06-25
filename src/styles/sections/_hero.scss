@@ -7,9 +7,20 @@
   width: 100%;
   height: 800px;
   color: $--color-white;
+
   @include laptop {
     padding-top: 213px;
     height: 768px;
+  }
+
+  @include tabletL {
+    padding-top: 160px;
+    height: 620px;
+  }
+
+  @include mobileL {
+    padding-top: 76px;
+    height: 355px;
   }
 }
 
@@ -40,8 +51,20 @@
   font-weight: 700;
   font-size: 72px;
   line-height: 83px;
+
   @include laptop {
     margin-bottom: 12px;
+  }
+
+  @include tabletL {
+    font-size: 48px;
+    line-height: 62px;
+    text-align: center;
+  }
+
+  @include mobileL {
+    font-size: 32px;
+    line-height: 39px;
   }
 }
 
@@ -51,9 +74,27 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
+
   @include laptop {
     margin-bottom: 158px;
     max-width: 670px;  
+  }
+
+  @include tabletL {
+    margin: 0 auto;
+    margin-bottom: 56px;
+    max-width: 480px;
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 400;
+    text-align: center;
+  }
+
+  @include mobileL {
+    margin-bottom: 40px;
+    font-size: 12px;
+    line-height: 16px;
+    max-width: 265px;
   }
 }
 
@@ -63,14 +104,31 @@
   background-color: $--color-accent;
   color: $--color-white;
   transition: box-shadow .1s linear;
+
+  @include tabletL {
+    display: block;
+    padding: 18px 25px;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 320px;
+  }
+
+  @include mobileL {
+    padding: 12px 5px;
+    max-width: 200px;
+    font-size: 12px;
+  }
+
   &:hover {
     box-shadow: 0 0 0 3px #d1a9f0;
     transition: box-shadow .1s linear background-color .1s linear;
   }
+
   &:focus-visible {
     outline: 2px solid #d1a9f0;
     outline-offset: 5px;
   }
+
   &:active {
     background-color: $--color-royal-purple;
     transition: background-color .1s linear;

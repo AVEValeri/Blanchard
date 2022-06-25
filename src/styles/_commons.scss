@@ -1,5 +1,8 @@
 .section {
   padding: 80px 0;
+  @include mobileL {
+    padding: 50px 0;
+  }
 }
 
 .section__title {
@@ -8,12 +11,24 @@
   font-size: 48px;
   line-height: 65px;
   color: $--color-jet;
+  @include mobileL {
+    font-size: 28px;
+    line-height: 38px;
+  }
 }
 
 .logo {
   width: 173px;
   height: 39px;
   fill: $--color-white;
+  @include laptop {
+    width: 184px;
+    height: 48px;
+  }
+
+  @include mobileL {
+    height: 21px;
+  }
 }
 
 .swiper-button {
@@ -62,7 +77,7 @@
 }
 
 .swiper__nav {
-  position: relative;
+  position: absolute;
   display: flex;
   top: 0;
   left: 0;

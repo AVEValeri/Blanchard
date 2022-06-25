@@ -108,6 +108,9 @@ input {
   @include tablet {
     max-width: 700px;
   }
+  @include mobileL {
+    max-width: 320px;
+  }
 }
 
 .flex {

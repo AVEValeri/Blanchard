@@ -25,13 +25,15 @@
 }
 
 .cross {
+  position: absolute;
   display: inline-block;
+  width: 30px;
+  height: 30px;
   &::before {
     content: '';
     position: absolute;
     top: 50%;
     right: 0;
-    margin-top: 3px;
     width: 30px;
     height: 3px;
     background-color: $--color-white;
@@ -42,7 +44,6 @@
     position: absolute;
     top: 50%;
     right: 0;
-    margin-top: 3px;
     width: 30px;
     height: 3px;
     background-color: $--color-white;

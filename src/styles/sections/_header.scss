@@ -6,6 +6,9 @@
   z-index: 10;
   padding: 30px 0;
   background-color: $--color-black;
+  @include mobileL {
+    padding: 5px 0;
+  }
 }
 
 .header__container {
@@ -34,8 +37,8 @@
 
 .burger {
   display: none;
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   transition: all .5s ease-in-out;
   &--open {
     .burger__line {
@@ -83,6 +86,10 @@
   height: 4px;
   background-color: $--color-white;
   transition: all .5s ease-in-out;
+  @include mobileL {
+    width: 16px;
+    height: 2px;
+  }
 
   &::before {
     content: '';
@@ -94,6 +101,11 @@
     height: 4px;
     background-color: $--color-white;
     transition: all .5s ease-in-out;
+    @include mobileL {
+      top: -8px;
+      width: 25px;
+      height: 2px;
+    }
   }
 
   &::after {
@@ -106,6 +118,11 @@
     height: 4px;
     background-color: $--color-white;
     transition: all .5s ease-in-out;
+    @include mobileL {
+      bottom: -8px;
+      width: 10px;
+      height: 2px;
+    }
   }
 }
 
@@ -224,11 +241,68 @@
   }
 }
 
+@keyframes search-open {
+  from {
+    margin: 10px 0 5px;
+    width: 0;
+  }
+  to {
+    margin: 10px 53px 5px 8px;
+    width: 218px;
+  }
+}
+
+@keyframes search-close {
+  from {
+    margin: 10px 53px 8px 8px;
+    width: 218px;
+  }
+
+  to {
+    margin: 10px 0 5px;
+    width: 0;
+  }
+}
+
+.search__btn--header {
+  left: -31px;
+  top: 6px;
+  @include mobileL {
+    left: -17px;
+    top: -10px;
+  }
+}
+
+.search__icon--header {
+  width: 29px;
+  height: 29px;
+  @include mobileL {
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.search__input--header {
+  margin: 10px 0 5px;
+  padding: 0;
+  width: 0;
+  // animation: search-close ease-in-out forwards;
+  @include mobileL {
+    display: none;
+  }
+}
+
 .header__icon {
   fill: #fff;
   width: 13px;
   height: 13px;
   transition: fill .1s linear;
+}
+
+.cross--search {
+  top: -100px;
+  right: 0;
+  transition: top .3s ease-in-out;
 }
 
 .cross--nav {
@@ -249,4 +323,26 @@
   margin-top: 0;
   width: 38px;
   height: 4px;
+}
+
+.search-open {
+  .search__input {
+    animation: search-open .3s ease-in-out forwards;
+  }
+  
+  .cross--search {
+    top: 5px;
+    transition: top .3s ease-in-out;
+  }
+}
+
+.search-close {
+  .search__input {
+    animation: search-close .3s ease-in-out forwards;
+  }
+
+  .cross--search {
+    top: -100px;
+    transition: top .3s ease-in-out;
+  }
 }

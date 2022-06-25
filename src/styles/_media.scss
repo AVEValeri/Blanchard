@@ -16,6 +16,18 @@
   }
 };
 
+@mixin tabletL {
+  @media (max-width: 590px) {
+    @content
+  }
+};
+
+@mixin mobileL {
+  @media (max-width: 425px) {
+    @content
+  }
+};
+
 @mixin mobile {
   @media (max-width: 320px) {
     @content

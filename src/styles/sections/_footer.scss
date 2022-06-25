@@ -6,14 +6,28 @@
   padding: 45px 15px;
   align-items: center;
   justify-content: space-between;
+
   @include laptop {
     padding: 40px 15px 37px;
+  }
+
+  @include mobileL {
+    padding: 20px 15px 14px;
+    flex-direction: column;
+  }
+}
+
+.footer__list {
+  @include mobileL {
+    margin-bottom: 20px;
+    order: -1;
   }
 }
 
 .footer__item {
   &:not(:last-child) {
     margin-right: 20px;
+
     @include laptop {
       margin-right: 30px;
     }
@@ -22,14 +36,21 @@
 
 .footer__social {
   display: inline-block;
+
   svg {
     width: 45px;
     height: 45px;
     fill: #cacaca;
     transition: color .1s linear;
+
     @include laptop {
       width: 60px;
       height: 60px;
+    }
+
+    @include mobileL {
+      width: 50px;
+      height: 50px;
     }
   }
   &:hover {
@@ -38,11 +59,13 @@
       transition: color .1s linear;
     }
   }
+
   &:focus-visible {
     svg {
       fill: $--color-white;
     }
   }
+
   &:active {
     svg {
       fill: $--color-accent;

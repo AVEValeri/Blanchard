@@ -24,7 +24,7 @@ const gallerySwiper = new Swiper(document.getElementById('gallery_swiper'), {
       slidesPerView: 1,
       spaceBetween: 0,
     },
-    375: {
+    590: {
       slidesPerView: 2,
       spaceBetween: 35,
     },
@@ -36,8 +36,8 @@ const gallerySwiper = new Swiper(document.getElementById('gallery_swiper'), {
 });
 
 const eventsSwiper = new Swiper(document.getElementById('events_swiper'), {
-  slidesPerView: 3,
-  spaceBetween: 50,
+  slidesPerView: 1,
+  spaceBetween: 0,
   loop: true,
   navigation: {
     nextEl: '.swiper-button-next--events',
@@ -47,7 +47,7 @@ const eventsSwiper = new Swiper(document.getElementById('events_swiper'), {
     type: 'bullets',
   },
   breakpoints: {
-    375: {
+    590: {
       slidesPerView: 2,
       spaceBetween: 35,
     },
@@ -74,7 +74,7 @@ const projectsSwiper = new Swiper(document.getElementById('project_swiper'), {
       slidesPerView: 1,
       spaceBetween: 0,
     },
-    375: {
+    590: {
       slidesPerView: 2,
       spaceBetween: 35,
     },

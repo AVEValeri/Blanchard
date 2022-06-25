@@ -1,5 +1,9 @@
 .events {
   padding: 0;
+  
+  @include mobileL {
+    padding-top: 9px;
+  }
 }
 .events__container {
   position: relative;
@@ -7,9 +11,14 @@
 
 .events__title {
   margin-bottom: 14px;
+
   @include tablet {
     margin-bottom: 22px;
     line-height: 1;
+  }
+
+  @include mobileL {
+    margin-bottom: 16px;
   }
 }
 
@@ -21,20 +30,24 @@
   height: 50px;
   background-color: #ececec;
   transition: all .1s linear;
+
   &::after {
     width: 12px;
     height: 12px;
     border-color: $--color-black;
   }
+
   &:hover {
     transition: background-color .1s linear;
     background-color: #d1a9f0;
   }
+
   &:focus-visible {
     box-shadow: 0 0 0 2px $--color-accent;
     transition: all .1s linear;
     outline: 0;
   }
+
   &:active {
     background-color: #d1a9f0;
     box-shadow: 0 0 0 2px $--color-accent;
@@ -47,6 +60,7 @@
   flex-direction: column;
   max-width: 500px;
   min-height: 700px;
+
   @include laptop {
     min-height: 682px;
     height: auto;
@@ -55,6 +69,7 @@
 
 .events__img {
   display: block;
+
   @include laptop {
     height: 200px;
   }
@@ -68,14 +83,21 @@
   padding: 14px 0 37px 50px;
   border: 1px solid $--color-gray;
   border-top: none;
+
   @include notebook {
     padding: 14px 33px 37px;
   }
+
   @include laptop {
     padding-bottom: 43px;
   }
+
   @include tablet {
     padding: 14px 17px 41px 37px;
+  }
+
+  @include mobileL {
+    padding: 19px 15px 44px 21px;
   }
 }
 
@@ -86,6 +108,7 @@
   font-size: 12px;
   line-height: 16px;
   color: $--color-gray;
+
   @include laptop {
     padding-right: 0;
     text-align: right;
@@ -94,8 +117,13 @@
 
 .event__period {
   margin-bottom: 10px;
+
   @include laptop {
     margin-bottom: 3px;
+  }
+
+  @include mobileL {
+    margin-bottom: 9px;
   }
 }
 
@@ -124,6 +152,11 @@
   font-size: 16px;
   line-height: 32px;
   transition: all .1s linear;
+
+  @include mobileL {
+    margin-left: 7px;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -132,6 +165,7 @@
     background-color:  $--color-accent;
     bottom: 5px;
   }
+
   &:hover {
     color: $--color-royal-purple;
     transition: all .1s linear;
@@ -140,6 +174,7 @@
       transition: all .1s linear;
     }
   }
+
   &:active {
     color: $--color-jet;
     transition: all .1s linear;
@@ -148,6 +183,7 @@
       transition: all .1s linear;
     }
   }
+
   &:focus-visible {
     color: $--color-white;
     background-color:  $--color-royal-purple;
@@ -168,18 +204,26 @@
     margin-top: 7px;
     width: max-content !important;
     display: none;
+
     @include laptop {
       display: block;
     }
+
     @include tablet {
       margin: 27px auto 0;
     }
+
+    @include mobileL {
+      margin-top: 16px;
+    }
   }
+
   .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     background-color: #cacaca;
   }
+
   .swiper-pagination-bullet-active {
     background-color: #666;
   }

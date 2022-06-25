@@ -2,9 +2,21 @@
   @include laptop {
     padding-top: 75px;
   }
+
+  @include mobileL {
+    padding-top: 47px;
+  }
 }
+
 .projects__title {
   margin-bottom: 16px;
+  @include tablet {
+    margin-bottom: 20px;
+  }
+
+  @include mobileL {
+    margin-bottom: 12px;
+  }
 }
 
 .projects__descr {
@@ -14,8 +26,13 @@
   font-size: 16px;
   line-height: 32px;
   color: $--color-jet;
+
   @include tablet {
     margin-bottom: 29px;
+  }
+
+  @include mobileL {
+    margin-bottom: 9px;
   }
 
   span {
@@ -27,6 +44,7 @@
     border-radius: 100%;
     background-color: $--color-white;
     box-shadow: 0 0 0 1px $--color-accent;
+
     &::after {
       content: "\00A1";
       position: absolute;
@@ -35,15 +53,19 @@
       color: $--color-black;
       display: inline-block;
     }
+
     &:hover {
       cursor: pointer;
       background-color: #d1a9f0;
     }
+
     &:focus-visible {
       background-color: #d1a9f0;
     }
+
     &:active {
       background-color: $--color-accent;
+
       &::after {
         color: $--color-white;
       }
@@ -83,17 +105,26 @@
   font-size: 24px;
   line-height: 32px;
   color: $--color-jet;
+
+  @include mobileL {
+    margin-bottom: -5px;
+    font-size: 18px;
+  }
 }
+
 .project__swiper-wrap {
   position: relative;
+
   .swiper-button {
     position: absolute;
     top: 50%;
     transform: translateY(50%);
   }
+
   .swiper-button-prev {
     left: 0;
   }
+
   .swiper-button-next {
     right: 0;
   }
@@ -102,11 +133,17 @@
 .project__swiper {
   padding-top: 15px;
   max-width: 1450px;
+
   @include laptop {
     max-width: 818px;
   }
+
   @include tablet {
     max-width: 563px;
+  }
+
+  @include mobileL {
+    max-width: 196px;
   }
 }
 
@@ -115,23 +152,33 @@
   padding: 40px 0px;
   border: 1px solid #cacaca;
   transition: all .2s ease-in-out;
+
   @include tablet {
     padding: 36px 0;
   }
+
+  @include mobileL {
+    padding: 19px 0;
+  }
+
   &:hover {
     transition: all .2s ease-in-out;
+
     .projects__img {
       filter: opacity(100%) grayscale(0);
       transition: all .2s ease-in-out;
     }
   }
+
   &:focus {
     outline: 0;
     border-color: $--color-accent;
   }
+
   &:active {
     border-color: $--color-accent;
     transition: all .2s ease-in-out;
+
     .projects__img {
       filter: opacity(100%) grayscale(0);
       transition: all .2s ease-in-out;
@@ -145,10 +192,16 @@
   height: 68px;
   filter: opacity(35%) grayscale(100%);
   transition: all .2s ease-in-out;
+
   @include laptop {
     height: 44px;
   }
+
   @include tablet {
     height: 36px;
+  }
+
+  @include mobileL {
+    height: 26px;
   }
 }
